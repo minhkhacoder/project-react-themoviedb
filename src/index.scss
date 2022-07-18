@@ -1,0 +1,80 @@
+/** @format */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yantramanav:wght@400;500;700&display=swap");
+
+@layer base {
+  body {
+    overflow-x: hidden;
+    @apply font-body bg-slate-900 text-white;
+  }
+}
+
+@layer components {
+  .page-container {
+    // max-width: 1440px;
+    padding: 0 98px;
+    @apply mx-auto;
+  }
+  .line-clamp {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  .header-animated {
+    background: #151313;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    box-shadow: rgba(255, 255, 255, 0.3);
+  }
+  .header-bg {
+    background: #151313;
+  }
+  .header-navbar {
+    width: 400px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .movies-list .swiper-slide {
+    width: 250px;
+    height: auto;
+  }
+  .cast-list .swiper-slide {
+    width: 200px;
+    height: auto;
+  }
+  .trailer-list .swiper-slide {
+    width: 450px;
+    height: auto;
+  }
+  .movies-list .swiper-button-next {
+    display: block;
+    color: #be123c;
+  }
+  .movies-list .swiper-button-prev {
+    display: block;
+    color: #be123c;
+  }
+}
+
+.zoom-enter .content {
+  opacity: 0;
+  transform: scale(0.5);
+}
+.zoom-enter-active .content {
+  opacity: 1;
+  transform: scale(1);
+}
+.zoom-exit .content {
+  opacity: 1;
+}
+.zoom-exit-active .content {
+  opacity: 0;
+  transform: scale(0.5);
+}
